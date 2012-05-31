@@ -4,7 +4,7 @@
 <html>
 <head>
 <!-- START_HIGHLIGHT -->
-  <title>Pragprog Books Online Store</title>
+  <title>Game of Thrones Bookshelf</title>
 <!-- END_HIGHLIGHT -->
   <%= stylesheet_link_tag "application" %><!-- <label id="code.slt"/> -->
   <%= javascript_include_tag "application" %><!-- <label id="code.jlt"/> -->
@@ -14,16 +14,16 @@
 <body class="<%= controller.controller_name %>">
 <!-- START_HIGHLIGHT -->
   <div id="banner">
-    <%= image_tag("stark4.jpg") %>
-    <%= @page_title || "Pragmatic Bookshelf" %><!-- <label id="code.depot.e.title"/> -->
+    <%= image_tag("stark5.jpg") %>
+    <%= @page_title || "Game of Thrones Bookshelf" %><!-- <label id="code.depot.e.title"/> -->
   </div>
   <div id="columns">
     <div id="side">
       <ul>
-        <li><a href="http://www....">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li>
-        <li><a href="http://www..../news">News</a></li>
-        <li><a href="http://www..../contact">Contact</a></li>
+        <li><%= link_to "Home", store_index_path %></li>
+        <li><%= link_to "Questions", '#' %></li>
+        <li><%= link_to "News", '#' %></li>
+        <li><%= link_to "Contact", '#' %></li>
       </ul>
     </div>
     <div id="main">
