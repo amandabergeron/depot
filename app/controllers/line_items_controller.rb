@@ -54,8 +54,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart,
-          notice: 'Line item was successfully created.' }
+        format.html { redirect_to store_url }
         format.json { render json: @line_item,
           status: :created, location: @line_item }
       else
@@ -65,7 +64,6 @@ class LineItemsController < ApplicationController
       end
     end
   end
-
   # PUT /line_items/1
   # PUT /line_items/1.json
   def update

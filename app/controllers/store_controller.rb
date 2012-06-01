@@ -4,7 +4,7 @@ class StoreController < ApplicationController
 #old	@products = Product.all
 
     @products = Product.order(:title)
-
+    @cart = current_cart
 
 
   end
