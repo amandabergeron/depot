@@ -8,7 +8,10 @@
 <body class="<%= controller.controller_name %>">
   <div id="banner">
     <%= image_tag("stark5.jpg") %>
-    <%= @page_title || "Game of Thrones Bookshelf" %><!-- <label id="code.depot.e.title"/> -->
+
+    <%= @page_title || t('.title') %>
+
+  <!--  <%= @page_title || "Game of Thrones Bookshelf" %> <label id="code.depot.e.title"/> -->
   </div>
   <div id="columns">
     <div id="side">
@@ -20,10 +23,12 @@
 
 
       <ul>
-        <li><%= link_to "Home", store_index_path %></li>
-        <li><%= link_to "Questions", '#' %></li>
-        <li><%= link_to "News", '#' %></li>
-        <li><%= link_to "Contact", '#' %></li>
+
+        <li><%= link_to t('.home'), store_path %></li>
+        <li><%= link_to t('.questions'), '#' %></li>
+        <li><%= link_to t('.news'), '#' %></li>
+        <li><%= link_to t('.contact'), '#' %></li> 
+
       </ul>
 
 <% if session[:user_id] %>
